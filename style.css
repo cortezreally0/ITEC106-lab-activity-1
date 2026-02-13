@@ -224,12 +224,14 @@ body {
     border: 1px solid rgba(0, 237, 100, 0.3);
     backdrop-filter: blur(5px);
     transition: all 0.3s ease;
+    border-radius: 15px;
 }
 
 .btn-glass-submit:hover {
     background: var(--color-green);
     color: #001e2b;
     box-shadow: 0 0 20px rgba(0, 237, 100, 0.4);
+    border-radius: 15px;
 }
 
 .invalid-feedback {
@@ -316,5 +318,43 @@ body {
 
 .glass-select option {
     background-color: #03580369;
+    color: white;
+}
+/* about */
+#about {
+    background-image: 
+        radial-gradient(circle at center, transparent 0%, var(--color-navy) 100%),
+        linear-gradient(rgba(255, 255, 255, 0.050) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.050) 1px, transparent 1px);
+    background-size: 90% 90%, 90px 90px, 90px 90px;
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.3);
+    content: "/";
+}
+
+.glass-card {
+    background: rgba(0, 56, 23, 0.068);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1) !important;
+}
+
+.gradient-text {
+    background: linear-gradient(90deg, #00edff, #00e676);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: bold;
+}
+
+.image-wrapper {
+    background: rgba(0, 237, 100, 0.05);
+    transition: transform 0.3s ease;
+}
+.image-wrapper:hover {
+    transform: scale(1.02);
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
     color: white;
 }
