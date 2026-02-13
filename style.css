@@ -2,6 +2,8 @@
     --color-navy: #001e2b;
     --color-green: #00ed64;
     --color-green-hover: #68ff5b;
+    --color-gray: #8899a6;
+    --color-semi-white: #e6ffe9;
 }
 
 body {
@@ -21,15 +23,18 @@ body {
     font-weight: 500;
     color: #cbd5e0 !important;
 }
+.nav-link:hover {
+    color: var(--color-green) !important;
+}
 
 /* Hero */
 .hero-section {
     padding: 100px 0;
     background-image: 
-        radial-gradient(circle at center, transparent 0%, var(--color-navy) 90%),
-        linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
-    background-size: 100% 100%, 80px 80px, 80px 80px;
+        radial-gradient(circle at center, transparent 0%, var(--color-navy) 100%),
+        linear-gradient(rgba(255, 255, 255, 0.050) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.050) 1px, transparent 1px);
+    background-size: 90% 90%, 90px 90px, 90px 90px;
 }
 
 .main-title {
@@ -65,17 +70,16 @@ body {
 .btn-signin-green {
     background-color: var(--color-green);
     color: var(--color-navy);
-    border-radius: 6px;
+    border-radius: 20px;
 }
 .btn-signin-green:hover {
-    background-color: var(--color-green-hover);
-    color: var(--color-navy);
-}
-
-.assistant-bar {
-    border: 1px solid rgba(255, 255, 255, 0.15);
-    border-radius: 10px;
-    background: rgba(0, 0, 0, 0.2);
+    background: rgba(0, 237, 100, 0.1);
+    color: var(--color-green);
+    border: 1px solid rgba(0, 237, 100, 0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 237, 100, 0.4);
 }
 
 .btn-dark-circle {
@@ -91,7 +95,7 @@ body {
 
 .faq-text {
     font-size: 0.75rem;
-    color: #8899a6;
+    color: var(--color-gray);
 }
 
 /* Jumbotron */
@@ -109,14 +113,14 @@ body {
 }
 
 .app-card:hover {
-    border-color: #00ed64; 
+    border-color: var(--color-green); 
     transform: translateY(-10px);
     box-shadow: 0 10px 30px rgba(0, 237, 100, 0.1);
 }
 
 .icon-box {
     font-size: 1.5rem;
-    color: #00ed64;
+    color: var(--color-green);
     background: rgba(0, 237, 100, 0.1);
     width: 50px;
     height: 50px;
@@ -126,16 +130,36 @@ body {
     border-radius: 12px;
 }
 
-
 .btn-color-green {
-    background-color: #00ed64;
-    color: #001e2b;
-    border: none;
+    background-color: var(--color-green);
+    color: var(--color-navy);
+    border-radius: 20px;
 }
 .btn-color-green:hover {
-    background-color: #00c352;
+    background: rgba(0, 237, 100, 0.1);
+    color: var(--color-green);
+    border: 1px solid rgba(0, 237, 100, 0.3);
+    border-radius: 20px;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 237, 100, 0.4);
 }
 
+.btn-outline-light {
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--color-semi-white);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    border-radius: 20px;
+}
+
+.btn-outline-light:hover {
+    border-color: rgba(255, 255, 255, 0.1);
+    color: black;
+    border-radius: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.4);
+}
 
 /* Footer */
 .footer-simple {
@@ -144,19 +168,130 @@ body {
 }
 
 .footer-nav-link {
-    color: #8899a6 !important;
+    color: var(--color-gray) !important;
     font-size: 0.95rem;
     padding: 0 15px !important;
     transition: color 0.3s ease;
 }
 
 .footer-nav-link:hover {
-    color: #00ed64 !important; /* Glow green on hover */
+    color: var(--color-green) !important;
 }
 
-/* Optional: subtle fade for the copyright text */
 .text-muted {
-    color: #8899a6 !important;
+    color: var(--color-semi-white) !important;
     opacity: 1;
     letter-spacing: 0.5px;
+}
+
+/* login */
+.login-section {
+    min-height: 80vh;
+    padding: 60px 0;
+    background-image: 
+        radial-gradient(circle at center, transparent 0%, var(--color-navy) 100%),
+        linear-gradient(rgba(255, 255, 255, 0.050) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.050) 1px, transparent 1px);
+    background-size: 90% 90%, 90px 90px, 90px 90px;
+}
+
+
+.login-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-control:focus {
+    background-color: rgba(255, 255, 255, 0.05);
+    border-color: var(--color-green-hover); 
+    color: white;
+    box-shadow: 0 0 0 0.20rem rgba(0, 237, 99, 0.336);
+}
+
+.form-control::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+
+.btn-glass-submit {
+    background: rgba(0, 237, 100, 0.1);
+    color: var(--color-green);
+    border: 1px solid rgba(0, 237, 100, 0.3);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.btn-glass-submit:hover {
+    background: var(--color-green);
+    color: #001e2b;
+    box-shadow: 0 0 20px rgba(0, 237, 100, 0.4);
+}
+
+.invalid-feedback {
+    color: #ff6b6b;
+}
+
+/* sign up */
+.registration-section {
+    min-height: 90vh;
+    padding: 60px 0;
+    background-image: 
+        radial-gradient(circle at center, transparent 0%, var(--color-navy) 100%),
+        linear-gradient(rgba(255, 255, 255, 0.050) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255, 255, 255, 0.050) 1px, transparent 1px);
+    background-size: 90% 90%, 90px 90px, 90px 90px;
+}
+
+.registration-card {
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.form-control {
+    color: rgba(255, 255, 255, 0.7) !important;
+}
+
+.form-control::file-selector-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    margin-right: 10px;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease; 
+}
+
+
+.form-control:hover::file-selector-button {
+    background-color: var(--color-green); 
+    color: var(--color-navy);         
+}
+
+.form-control[type="file"]::-webkit-file-upload-button {
+    background-color: rgba(255, 255, 255, 0.1);
+    color: white;
+    border: none;
+    margin-right: 10px;
+    padding: 5px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.form-control[type="file"]:hover::-webkit-file-upload-button {
+    background-color: var(--color-green);
+    color: var(--color-navy);
+}
+
+.form-check-input:checked {
+    background-color: var(--color-green);
+    border-color: var(--color-green);
+}
+
+.form-check-input {
+    background-color: transparent;
+    border-color: rgba(255, 255, 255, 0.3);
 }
