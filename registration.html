@@ -26,7 +26,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav align-items-center ms-auto mb-2 mb-lg-0">
                 <li class="nav-item"><a class="nav-link px-3" href="login.html">Login</a></li>
-                <li class="nav-item"><a class="nav-link px-3" href="registration.html">Registration</a></li>
+                <li class="nav-item"><a class="nav-link active px-3" href="registration.html">Registration</a></li>
                 <li class="nav-item"><a class="nav-link px-3" href="about.html">About</a></li>
                 <li class="nav-item"><a class="nav-link px-3" href="contact.html">Contact</a></li>
                 <a href="login.html" class="btn btn-signin-green w-100 py-2 fw-bold mb-1">Sign in</a>
@@ -80,29 +80,25 @@
                                 <div class="valid-feedback">Password is match!</div>
                             </div>
                         </div>
+                         <div class="row">
+                            <div class="col-md-4 mb-3">
+                            <label for="genderSelect" class="form-label text-white small">Gender (Optional)</label>
+                            <select class="form-select bg-transparent text-white border-secondary glass-select" id="genderSelect" name="gender">
+                                <option value="" class="bg-dark" selected>Select gender</option>
+                                <option value="male" class="bg-dark">Male</option>
+                                <option value="female" class="bg-dark">Female</option>
+                                <option value="preferNotToSay" class="bg-dark">Prefer not to say</option>
+                            </select>
+                        </div>  
 
-                        <div class="mb-3">
-                            <label class="form-label text-white small d-block">Gender (Optional)</label>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="gender" id="male" value="male">
-                                <label class="form-check-label text-white small" for="male">Male</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="gender" id="female" value="female">
-                                <label class="form-check-label text-white small" for="female">Female</label>
-                            </div>
-                            <div class="form-check form-check-inline">
-                                <input class="form-check-input" type="radio" name="gender" id="preferNotToSay" value="preferNotToSay">
-                                <label class="form-check-label text-white small" for="preferNotToSay">Prefer not to say</label>
-                            </div>
-                        </div>
-
-                        <div class="mb-4">
+                         <div class="col-md-8 mb-4">
                             <label class="form-label text-white small">Profile Picture (Optional)</label>
                             <input type="file" class="form-control bg-transparent text-white border-secondary custom-file-input">
+                            <p class="text-secondary small">Max file size: 5MB</p>
                         </div>
+                         </div>
 
-                         <div class="mb-4">
+                        <div class="mb-4">
                             <div class="form-check">
                                 <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
                                 <label class="form-check-label text-white small" for="invalidCheck">Agree to terms and conditions</label>
